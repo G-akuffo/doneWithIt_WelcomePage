@@ -1,5 +1,12 @@
 import React from "react";
-import { ImageBackground, StyleSheet, View, Image, Text } from "react-native";
+import {
+  ImageBackground,
+  StyleSheet,
+  View,
+  Image,
+  Text,
+  TouchableOpacity,
+} from "react-native";
 
 function WelcomeScreen(props) {
   return (
@@ -11,12 +18,16 @@ function WelcomeScreen(props) {
         <Image style={styles.logo} source={require("../assets/logo-red.png")} />
         <Text style={styles.text}>Sell What You Don't Need Anymore</Text>
       </View>
-      <View style={styles.loginButton}>
-        <Text style={styles.setColorWhite}>LOGIN</Text>
-      </View>
-      <View style={styles.registerButton}>
-        <Text style={styles.setColorWhite}>REGISTER</Text>
-      </View>
+      <TouchableOpacity style={styles.loginButton}>
+        <View style={styles.loginButton}>
+          <Text style={styles.setColorWhite}>LOGIN</Text>
+        </View>
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.loginButton}>
+        <View style={styles.registerButton}>
+          <Text style={styles.setColorWhite}>REGISTER</Text>
+        </View>
+      </TouchableOpacity>
     </ImageBackground>
   );
 }
